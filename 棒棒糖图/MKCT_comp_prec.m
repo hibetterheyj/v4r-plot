@@ -81,4 +81,6 @@ lineWidth = 5; % 画线的线粗
 
 tightfig;
 
-% saveas(gcf,'Prec_ablation.pdf')
+% 输出保存
+% saveas(gcf,'Prec_ablation.pdf'); % pdf
+saveas(gcf,'example','png'); % png

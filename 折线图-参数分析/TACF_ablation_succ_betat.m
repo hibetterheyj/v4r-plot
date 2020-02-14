@@ -71,5 +71,6 @@ grid
 
 tightfig;
 
-% 输出保存为pdf
-saveas(gcf,'ablation_succ_betat.pdf')
+% 输出保存
+% saveas(gcf,'ablation_succ_betat.pdf') % pdf
+saveas(gcf,'example','png') % png
