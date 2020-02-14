@@ -5,6 +5,10 @@
 % https://ww2.mathworks.cn/help/matlab/ref/legend.html
 
 %% 正文
+% 添加tightfig
+addpath('../');
+
+% 数据
 y=[0.389 0.374;0.432 0.421; 0.425 0.407; 0.423 0.398; 0.437 0.456;];
 b=bar(y);
 grid on;
@@ -21,3 +25,5 @@ set(gca,'YLim',[0.35, 0.50]);%X轴的数据显示范围
 ylabel('Success Rate');
 % 设置标签，及其位置
 legend('UAVDT','UAV123@10fps','Location','northwest');
+
+tightfig;
