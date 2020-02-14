@@ -10,40 +10,41 @@ addpath('../');
 
 % 数据
 data = ...
-[0.684 	0.447 	0;
-0.695 	0.463 	1/1024;
-0.705 	0.457 	2/1024;
-0.710 	0.463 	3/1024;
-0.718 	0.461 	4/1024;
-0.709 	0.472 	5/1024;
-0.711 	0.467 	6/1024;
-0.708 	0.467 	7/1024;
-0.704 	0.469 	8/1024];
-gamma = data(:,3);
-% 1234列分别代表上，左，下，右
-prec = data(:,1);
-succ = data(:,2);
+[0.410 0;
+0.423 0.05;
+0.437 0.10;
+0.430 0.15;
+0.431 0.20;
+0.421 0.25;
+0.415 0.30;
+0.416 0.35;
+0.412 0.40];
+beta = data(:,2);
+
+succ = data(:,1);
 baseline = ones(9,1);
 
 figure33_1 = figure(301);
 set(figure33_1,'position',[0 0 700 250]);
 % subplot(211)
-h1=plot(gamma, prec(1:end), 'o-',...
-    'Color',[0,0.45,0.74],...
+h1=plot(beta, succ(1:end), 'o-',...
+    'Color',[0,0.4,0.74],...
     'LineWidth',2,...
     'MarkerSize',8,...
     'MarkerEdgeColor',[0,0.45,0.74]); % [0,0.45,0.74]
     ...'MarkerFaceColor',[0.5,0.5,0.5]
 hold on
 % plot(gamma, min(prec) * baseline, 'r--','LineWidth',2);
-axis([0 8/1024 0.68 0.72]);
+axis([0 0.4 0.410 0.440]);
 yLabelName1 = 'Precision';
 
 fontSize = 13;
-% ylabel(yLabelName1,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 纵轴名称
-% set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
-ylabel(yLabelName1,'fontsize',fontSize,'fontweight','bold'); % 纵轴名称
-set(gca,'fontSize',fontSize); % 设置坐标轴值字体
+% Times 字体
+ylabel(yLabelName1,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 纵轴名称
+set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
+% 默认无衬线字体
+% ylabel(yLabelName1,'fontsize',fontSize,'fontweight','bold'); % 纵轴名称
+% set(gca,'fontSize',fontSize); % 设置坐标轴值字体
 
 % subplot(212)
 % h2=plot(gamma, succ(1:end), 'k','LineWidth',2);
@@ -58,16 +59,17 @@ set(gca,'box','on')
 
 % set(legend1, 'Fontname', 'Times New Roman','FontWeight','normal'); % 设置legend字体
 
-xticks([1/1024,2/1024,3/1024,4/1024,5/1024,6/1024,7/1024,8/1024]);
-xticklabels({'1/1024','1/512','3/1024','1/256','5/1024','3/512','7/1024','1/128'});
+xticks(0:0.05:0.4);
+xticklabels({'0','0.05','0.10','0.15','0.20','0.25','0.30','0.35','0.40'});
 
 
 lineWidth = 5; % 画线的线粗
-xLabelName = '\lambda_2';
+xLabelName = '\beta_t';
 % xlabel(xLabelName,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 横轴名称
 xlabel(xLabelName,'fontsize',fontSize,'fontweight','bold'); % 横轴名称
 grid
 
 tightfig;
 
-saveas(gcf,'ablation_prec_lambda2.pdf')
+% 输出保存为pdf
+saveas(gcf,'ablation_succ_betat.pdf')

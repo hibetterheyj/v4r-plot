@@ -26,4 +26,12 @@ ylabel('Success Rate');
 % 设置标签，及其位置
 legend('UAVDT','UAV123@10fps','Location','northwest');
 
+fontSize = 13;
+% Times 字体
+ylabel(yLabelName1,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 纵轴名称
+set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
+% 默认无衬线字体
+% ylabel(yLabelName1,'fontsize',fontSize,'fontweight','bold'); % 纵轴名称
+% set(gca,'fontSize',fontSize); % 设置坐标轴值字体
+
 tightfig;
