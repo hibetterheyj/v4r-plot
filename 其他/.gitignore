@@ -1,0 +1,19 @@
+#######################################
+# Modified from https://github.com/github/gitignore/blob/master/Global/MATLAB.gitignore
+# Project name: MATLAB.gitignore_v1.0
+# Author name: Yujie He
+# Created time: 20200125
+# Last edited time: 20200125
+#######################################
+
+## Folder
+anno/
+
+## frequent use
+# Windows 默认自动保存文件
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix 默认自动保存文件
+# OSX / *nix default autosave extension
+*.m~
