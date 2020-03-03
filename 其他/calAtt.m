@@ -15,8 +15,8 @@
 
 %% 代码
 clc;clear;close all;
-% UAV20L UAV123 UAV123_10fps UAVDT DTB70
-dataset = 'DTB70';
+% UAV20L UAV123 UAV123_10fps UAVDT DTB70 VisDrone2018
+dataset = 'VisDrone2018';
 
 % 相关文件夹
 attFolder = ['./anno/' dataset '/att/'];
@@ -52,7 +52,15 @@ switch dataset
         attName = {'Scale variation','Aspect ratio variation','Occlusion','Deformation','Fast camera motion','In-plane rotation','Out-of-plane rotation','Out-of-view','Background clutter','Similar objects around','Motion blur'};
         attName_abbr = {'ARV','BC','DEF','FCM','IPR','MB','OCC','OPR','OV','SV','SOA'}; % 行标缩写
         attNum = 11;
+    case 'VisDrone2018'
+%         attName = {'Aspect Ratio Change','Background Clutter','Camera Motion','Fast Motion','Full Occlusion','Illumination Variation','Low Resolution',...
+%            'Out-of-View','Partial Occlusion','Similar Object','Scale Variation','Viewpoint Change'};
+        attName = {'Aspect ratio change','Background clutter','Camera motion','Fast motion','Full occlusion','Illumination variation','Low resolution',...
+           'Out-of-view','Partial occlusion','Similar object','Scale variation','Viewpoint change'};
+        attName_abbr = {'ARV','BC','CM','FM','FOC','IV','LR','OV','POC','SOB','SV','SV'}; % 行标缩写
+        attNum = 12;
 end
+
 
 % 构建参数矩阵
 attMatrix = zeros(len, attNum);
