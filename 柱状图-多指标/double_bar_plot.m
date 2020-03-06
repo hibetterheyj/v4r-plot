@@ -4,9 +4,16 @@
 % 2. matlab - legend
 % https://ww2.mathworks.cn/help/matlab/ref/legend.html
 
+%% 说明
+% 多个跟踪器在一个指标两个数据集的分析
+
 %% 正文
+clear;clc;close all;
 % 添加tightfig
 addpath('../');
+
+saveFileName = 'double_bar_plot';
+saveFileType = 'png'; % pdf/png
 
 % 图窗
 figure4D = figure(40);
@@ -17,7 +24,9 @@ y=[0.389 0.374;0.432 0.421; 0.425 0.407; 0.423 0.398; 0.437 0.456;];
 % 将各条形的宽度设置为各条形可用总空间的 80%。
 barWidth = 0.8;
 b=bar(y, barWidth);
-grid on;
+% 是否grid
+% set(gca,'Xgrid','on'); % 出现竖线
+set(gca,'Ygrid','on'); % 出现横线
 
 %设置x轴范围和刻度
 % set(gca,'XLim',[1, 5]);%X轴的数据显示范围
@@ -55,5 +64,11 @@ text(i + 0.02*barWidth, y(i,2) + verticalOffset, string(y(i,2)),'fontname','Time
 tightfig;
 
 % 输出保存
-saveas(gcf,'TACF_ablation.pdf'); % pdf
-% saveas(gcf,'example','png'); % png
+switch saveFileType
+    case 'pdf'
+        saveas(gcf,[saveFileName '.pdf']); % pdf
+    case 'png'
+        saveas(gcf,saveFileName,'png'); % png
+    otherwise
+        disp('Type error !')
+end
