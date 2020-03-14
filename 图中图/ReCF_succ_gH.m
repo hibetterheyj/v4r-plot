@@ -17,22 +17,20 @@ clc;clear;close all;
 load('ReCF_succ_data.mat');
 
 % 数据
-data = ReCF_succ_data.gI;
+data = ReCF_succ_data.gH;
 gI = data(:,1);
 gH = data(:,2);
 succ = data(:,4);
 % 取出不画中间数据
-data2 = data;
-% 9:79.5 10:80
-% data2(9,:) = [];
-% data2(10:15,:) = [];
+% data2 = data;
+% data2(7:17,:) = [];
 % gI2 = data2(:,1);
 % gH2 = data2(:,2);
 % succ2 = data2(:,4);
 
 figure33_1 = figure(301);
 set(figure33_1,'position',[0 0 1000 400]);
-h1=plot(gI, succ, 'o-',...
+h1=plot(gH, succ, 'o-',...
     'Color',[0,0.4,0.74],...
     'LineWidth',1.5,...
     'MarkerSize',5,...
@@ -40,10 +38,13 @@ h1=plot(gI, succ, 'o-',...
     ...'MarkerFaceColor',[0.5,0.5,0.5]
 hold on
 % 当前范围
-% rectangle('Position',[81 0.448 1 0.01],'LineWidth',1.5)
-% rectangle('Position',[79 0.451 4 0.012],'LineWidth',1.5)
+% 27-28
+% rectangle('Position',[26.9 0.45 1.2 0.008],'LineWidth',1.5)
+% rectangle('Position',[26.2 0.454 1.8 0.003],'LineWidth',1.5)
 % 圆形
-rectangle('Position',[78.5 0.442 4.5 0.02],'LineWidth',1.5,'Curvature',[1 1]);
+rectangle('Position',[26.8 0.452 1.6 0.0055],'LineWidth',1.5,'Curvature',[1 1]);
+% 椭圆
+% rectangle('Position',[26.5 0.450 1.6 0.008],'LineWidth',1.5,'Curvature',[1 1]);
 
 % 额外的横线
 % hold on
@@ -53,7 +54,8 @@ rectangle('Position',[78.5 0.442 4.5 0.02],'LineWidth',1.5,'Curvature',[1 1]);
 % set(gca,'Xgrid','on'); % 出现竖线
 set(gca,'Ygrid','on'); % 出现横线
 
-axis([0 100 0.350 0.47]);
+% axis([0 30 0.435 0.460]);
+axis([0 30 0.435 0.460]);
 yLabelName1 = 'Success rate (AUC score)';
 
 fontSize = 18;
@@ -68,24 +70,24 @@ set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
 set(gca,'box','on')
 
 % set(legend1, 'Fontname', 'Times New Roman','FontWeight','normal'); % 设置legend字体
-
 % 矫正ytick全为保留三位小数
-set(gca,'ytick',(0.35:0.02:0.47))
+set(gca,'ytick',(0.435:0.005:0.46))
 set(gca,'yTickLabel',num2str(get(gca,'yTick')','%.3f'))
-% 自定义xtick
+% 设置tick
 % xticks(0:0.05:0.4);
 % xticklabels({'0','0.05','0.10','0.15','0.20','0.25','0.30','0.35','0.40'});
 
 lineWidth = 5; % 画线的线粗
-xLabelName = '\gamma_{\it{I}}';
+xLabelName = '\gamma_{\it{H}}';
 % xlabel(xLabelName,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 横轴名称
+% xlabel(xLabelName,'fontsize',fontSize,'fontweight','bold'); % 横轴名称
 xlabel(xLabelName,'fontsize',fontSize); % 横轴名称
 
-% 左下角位于点 (0.5,0.2) 处，宽度和高度为 (0.28,0.25)
-axes('Position',[0.58,0.28,0.3,0.26]); % 生成子图   
-startIndex = 9;endIndex = 14; % startIndex:endIndex
-chooseIndex = 13;
-h2=plot(gI(startIndex:endIndex), succ(startIndex:endIndex), 'o-',...
+% 左下角位于点 (0.6,0.2) 处，宽度和高度为 (0.28,0.25)
+axes('Position',[0.58,0.28,0.3,0.26]); % 生成子图 
+startIndex = 4;endIndex = 8; % startIndex:endIndex
+chooseIndex = 6;
+h2=plot(gH(startIndex:endIndex), succ(startIndex:endIndex), 'o-',...
     'Color',[0,0.4,0.74],...
     'LineWidth',2,...
     'MarkerSize',8,...
@@ -93,7 +95,7 @@ h2=plot(gI(startIndex:endIndex), succ(startIndex:endIndex), 'o-',...
     ...'MarkerFaceColor',[0.5,0.5,0.5]
 % 设置子图坐标轴范围 
 hold on
-lineX = [81.5, 81.5];lineY = [0.448,succ(chooseIndex)];
+lineX = [27.6, 27.6];lineY = [0.45,succ(chooseIndex)];
 plot(lineX,lineY,'r--','LineWidth',1.5);
 % 是否grid
 % set(gca,'Xgrid','on'); % 出现竖线
@@ -102,16 +104,15 @@ set(gca,'Ygrid','on'); % 出现横线
 subFontSize = 14;
 set(gca,'FontName','Times New Roman','fontSize',subFontSize);
 % 矫正xtick全为保留三位小数
-set(gca,'xtick',(79.5:0.5:83))
+set(gca,'xtick',(27.2:0.2:28))
 set(gca,'xTickLabel',num2str(get(gca,'xTick')','%.1f'))
 % 矫正ytick全为保留三位小数
-set(gca,'ytick',(0.448:0.002:0.458))
+set(gca,'ytick',(0.452:0.002:0.458))
 set(gca,'yTickLabel',num2str(get(gca,'yTick')','%.3f'))
-xlim([min(gI(startIndex:endIndex)),max(gI(startIndex:endIndex))]); 
-ylim([0.448,0.458]);
-
+xlim([min(gH(startIndex:endIndex)),max(gH(startIndex:endIndex))]); % 设置坐标轴范围 
+ylim([0.452,0.458]);
 tightfig;
 
 % 输出保存
-saveas(gcf,'ReCF_succ_gI.pdf') % pdf
-saveas(gcf,'ReCF_succ_gI','png') % png
+saveas(gcf,'ReCF_succ_gH.pdf') % pdf
+saveas(gcf,'ReCF_succ_gH','png') % png
