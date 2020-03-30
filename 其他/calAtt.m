@@ -57,7 +57,7 @@ switch dataset
 %            'Out-of-View','Partial Occlusion','Similar Object','Scale Variation','Viewpoint Change'};
         attName = {'Aspect ratio change','Background clutter','Camera motion','Fast motion','Full occlusion','Illumination variation','Low resolution',...
            'Out-of-view','Partial occlusion','Similar object','Scale variation','Viewpoint change'};
-        attName_abbr = {'ARV','BC','CM','FM','FOC','IV','LR','OV','POC','SOB','SV','SV'}; % 行标缩写
+        attName_abbr = {'ARV','BC','CM','FM','FOC','IV','LR','OV','POC','SOB','SV','VC'}; % 行标缩写
         attNum = 12;
 end
 

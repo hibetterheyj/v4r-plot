@@ -2,13 +2,17 @@
 % 1. matlab - scatter
 % https://ww2.mathworks.cn/help/matlab/ref/scatter.html
 
+%% 说明
+% 多个跟踪器在一个指标两个数据集的分析v2
+% TODO 加入log画图
+
 %% 正文
 % 添加tightfig
 addpath('../');
 clc;clear;close all;
 
 saveFileName = 'star_plot';
-saveFileType = 'pdf'; % pdf/png
+saveFileType = 'png'; % pdf/png
 
 plotDrawStyle = {struct('color',[1,0,0],'lineStyle','p'),...
     struct('color',[1,0,0],'lineStyle','p'),...
