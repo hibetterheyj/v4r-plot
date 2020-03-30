@@ -2,13 +2,11 @@
 
 😀 to be continued !
 
-> 参考：https://github.com/altmany/export_fig
-
 ### TODO
 
 - [ ] 折线图不同时间段
 - [ ] 折线图不同指标
-- [ ] 星星图
+- [x] 星星图（20200330，第一版）
 
 ### Finished
 
@@ -20,3 +18,8 @@
 - [x] 其他
   - 数据集尺度分析
   - 数据集挑战因素分析
+
+## 4 参考 | Reference
+
+- [altmany/**export_fig**](https://github.com/altmany/export_fig): A MATLAB toolbox for exporting publication quality figures
+- [vacancy/**Jacinle**](https://github.com/vacancy/Jacinle): MIT大佬个人代码库(python)

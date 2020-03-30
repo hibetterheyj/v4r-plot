@@ -9,6 +9,8 @@
 % https://ww2.mathworks.cn/help/matlab/ref/axes.html
 % 5. matlab - rectangle 矩形，圆角矩形，椭圆
 % https://ww2.mathworks.cn/help/matlab/ref/rectangle.html
+%% 说明
+% 多个跟踪器画星星图
 
 %% 正文
 % 添加tightfig
