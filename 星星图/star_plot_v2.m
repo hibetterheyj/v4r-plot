@@ -8,7 +8,7 @@ addpath('../');
 clc;clear;close all;
 
 saveFileName = 'star_plotv2';
-saveFileType = 'png'; % pdf/png
+saveFileType = 'pdf'; % pdf/png
 
 plotDrawStyle = {struct('color',[1,0,0],'lineStyle','p'),...
     struct('color',[1,0,0],'lineStyle','p'),...
@@ -83,8 +83,8 @@ for ii = 1:length(succ)
 end
 
 fontSize = 18;
-legendFont = 11;
-set(gcf, 'position', [0 0 1200 800]);
+legendFont = 12;
+set(gcf, 'position', [0 0 1200 850]);
 xLabelName = 'Success rate';
 yLabelName = 'Precision';
 legend1=legend(tmpName,'Interpreter', 'latex','fontsize',legendFont, 'location', 'southeastoutside');
