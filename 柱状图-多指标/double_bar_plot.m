@@ -51,15 +51,35 @@ set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
 % set(gca,'fontSize',fontSize); % 设置坐标轴值字体
 
 % 手动文字添加文字标签
+% 'HorizontalAlignment' - 相对于位置点水平对齐文本
+% 'left' （默认） | 'center' | 'right'
 verticalOffset = 0.0035;
-for i = 1 : size(y, 1)-1
-    text(i - 0.34*barWidth, y(i,1) + verticalOffset, string(y(i,1)),'fontname','Times New Roman');
-    text(i + 0.02*barWidth, y(i,2) + verticalOffset, string(y(i,2)),'fontname','Times New Roman');
+for i = 1 : size(y, 1)
+    % 原版
+%     if i == size(y, 1)
+%         text(i - 0.34*barWidth, y(i,1) + verticalOffset, string(y(i,1)),...
+%             'fontname','Times New Roman','fontweight','bold');
+%         text(i + 0.02*barWidth, y(i,2) + verticalOffset, string(y(i,2)),...
+%             'fontname','Times New Roman','fontweight','bold');
+%     else
+%         text(i - 0.34*barWidth, y(i,1) + verticalOffset, string(y(i,1)),...
+%             'fontname','Times New Roman');
+%         text(i + 0.02*barWidth, y(i,2) + verticalOffset, string(y(i,2)),...
+%             'fontname','Times New Roman');
+%     end
+    % 新版直接采用居中对齐！
+    if i == size(y, 1)
+        text(i - 0.18*barWidth, y(i,1) + verticalOffset, string(y(i,1)),...
+            'fontname','Times New Roman','fontweight','bold','HorizontalAlignment','center');
+        text(i + 0.18*barWidth, y(i,2) + verticalOffset, string(y(i,2)),...
+            'fontname','Times New Roman','fontweight','bold','HorizontalAlignment','center');
+    else
+        text(i - 0.18*barWidth, y(i,1) + verticalOffset, string(y(i,1)),...
+            'fontname','Times New Roman','HorizontalAlignment','center');
+        text(i + 0.18*barWidth, y(i,2) + verticalOffset, string(y(i,2)),...
+            'fontname','Times New Roman','HorizontalAlignment','center');
+    end
 end
-% 最后两行
-i = size(y, 1);
-text(i - 0.34*barWidth, y(i,1) + verticalOffset, string(y(i,1)),'fontname','Times New Roman','fontweight','bold');
-text(i + 0.02*barWidth, y(i,2) + verticalOffset, string(y(i,2)),'fontname','Times New Roman','fontweight','bold');
 
 tightfig;
 

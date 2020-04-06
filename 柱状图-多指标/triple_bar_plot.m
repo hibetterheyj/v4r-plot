@@ -76,16 +76,24 @@ set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
 
 % 手动文字添加文字标签
 verticalOffset = 0.015;
-for i = 1 : size(plotVariable, 1)-1
-    text(i - 0.35*barWidth, plotVariable(i,1) + verticalOffset, string(100*plotVariable(i,1)),'fontname','Times New Roman');
-    text(i - 0.07*barWidth, plotVariable(i,2) + verticalOffset, string(100*plotVariable(i,2)),'fontname','Times New Roman');
-    text(i + 0.21*barWidth, plotVariable(i,3) + verticalOffset, string(100*plotVariable(i,3)),'fontname','Times New Roman');
+for i = 1 : size(plotVariable, 1)
+    if i == size(plotVariable, 1)
+        text(i - 0.35*barWidth, plotVariable(i,1) + verticalOffset, string(100*plotVariable(i,1)),...
+            'fontname','Times New Roman','fontweight','bold');
+        text(i - 0.07*barWidth, plotVariable(i,2) + verticalOffset, string(100*plotVariable(i,2)),...
+            'fontname','Times New Roman','fontweight','bold');
+        text(i + 0.21*barWidth, plotVariable(i,3) + verticalOffset, string(100*plotVariable(i,3)),...
+            'fontname','Times New Roman','fontweight','bold');
+    else
+        text(i - 0.35*barWidth, plotVariable(i,1) + verticalOffset, string(100*plotVariable(i,1)),...
+            'fontname','Times New Roman');
+        text(i - 0.07*barWidth, plotVariable(i,2) + verticalOffset, string(100*plotVariable(i,2)),...
+            'fontname','Times New Roman');
+        text(i + 0.21*barWidth, plotVariable(i,3) + verticalOffset, string(100*plotVariable(i,3)),...
+            'fontname','Times New Roman');
+    end
 end
-% 最后两行
-i = size(plotVariable, 1);
-text(i - 0.35*barWidth, plotVariable(i,1) + verticalOffset, string(100*plotVariable(i,1)),'fontname','Times New Roman','fontweight','bold');
-text(i - 0.07*barWidth, plotVariable(i,2) + verticalOffset, string(100*plotVariable(i,2)),'fontname','Times New Roman','fontweight','bold');
-text(i + 0.21*barWidth, plotVariable(i,3) + verticalOffset, string(100*plotVariable(i,3)),'fontname','Times New Roman','fontweight','bold');
+
 
 tightfig;
 

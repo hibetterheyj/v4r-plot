@@ -23,16 +23,16 @@ set(figure4D,'position',[0 0 800 450]);
 
 % 数据
 y=[0.71526 0.45648;
-   0.71595 0.45722;
-   0.71597 0.45733;
-   0.71539 0.45684;
-   0.71618 0.45833;
-   0.71735 0.45957;];
+    0.71595 0.45722;
+    0.71597 0.45733;
+    0.71539 0.45684;
+    0.71618 0.45833;
+    0.71735 0.45957;];
 % 将各条形的宽度设置为各条形可用总空间的 80%。
 prec = y(:,1);
 succ = y(:,2);
 index = succ; % prec/succ
-barWidth = 0.8;
+barWidth = 0.6;
 b=bar(index, barWidth);
 % 是否grid
 % set(gca,'Xgrid','on'); % 出现竖线
@@ -73,11 +73,12 @@ set(gca,'FontName','Times New Roman','fontSize',fontSize); % 设置坐标轴值字体
 % 'left' （默认） | 'center' | 'right'
 verticalOffset = 0.001;
 for i = 1 : size(y, 1)
-    text(i, index(i) + verticalOffset, num2str(index(i),'%.3f'),...
-        'fontname','Times New Roman','HorizontalAlignment','center');
     if i == size(y, 1)
         text(i, index(i) + verticalOffset, num2str(index(i),'%.3f'),...
             'fontname','Times New Roman','fontweight','bold','HorizontalAlignment','center');
+    else
+        text(i, index(i) + verticalOffset, num2str(index(i),'%.3f'),...
+            'fontname','Times New Roman','HorizontalAlignment','center');
     end
 end
 

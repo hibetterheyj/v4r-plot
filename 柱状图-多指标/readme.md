@@ -1,4 +1,4 @@
-# 柱状图-多指标
+# 柱状图-单/多指标
 
 - TODO
 
@@ -10,13 +10,17 @@
 2.多柱子自动切换！
 ```
 
-- `double_bar_plot`
+- `single_bar_plot.m`
+
+  ![`single_bar_plot](./single_bar_plot.png)
+
+- `double_bar_plot.m`
 
 > 多个跟踪器在一个指标**两个**数据集的分析
 
 ![double_bar_plot](./double_bar_plot.png)
 
-- `triple_bar_plot`
+- `triple_bar_plot.m`
 
 > 多个跟踪器在一个指标（可切换）**三个**数据集的分析
 
