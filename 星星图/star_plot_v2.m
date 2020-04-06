@@ -82,7 +82,7 @@ for ii = 1:length(succ)
     hold on;
 end
 
-fontSize = 18;
+fontSize = 24;
 legendFont = 12;
 set(gcf, 'position', [0 0 1200 850]);
 xLabelName = 'Success rate';
@@ -105,10 +105,10 @@ set(gca,'FontName','Times New Roman','fontSize',fontSize-4); % 设置坐标轴值字体
 % ylabel(yLabelName1,'fontsize',fontSize,'fontweight','bold'); % 纵轴名称
 % set(gca,'fontSize',fontSize); % 设置坐标轴值字体
 
-% 矫正 xtick 全为保留三位小数
+% 矫正 xtick 全为保留两位小数
 set(gca,'xtick',(0.28:0.02:0.46))
 set(gca,'xTickLabel',num2str(get(gca,'xTick')','%.2f'))
-% 矫正 ytick 全为保留三位小数
+% 矫正 ytick 全为保留两位小数
 set(gca,'ytick',(0.56:0.02:0.72))
 set(gca,'yTickLabel',num2str(get(gca,'yTick')','%.2f'))
 title(  'Overall performance on UAVDT','fontsize',fontSize,'fontname','Times New Roman','fontweight','bold');

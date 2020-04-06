@@ -12,7 +12,7 @@ addpath('../');
 clc;clear;close all;
 
 saveFileName = 'KBCF_succ_log_star';
-saveFileType = 'png'; % pdf/png
+saveFileType = 'pdf'; % pdf/png
 
 plotDrawStyle = {struct('color',[1,0,0],'Marker','p'),...
     struct('color',[1,0,0],'Marker','p'),...
@@ -86,9 +86,9 @@ for ii = 1:length(succ)
     hold on;
 end
 
-fontSize = 18;
+fontSize = 24;
 legendFont = 12;
-set(gcf, 'position', [0 0 1350 850]);
+set(gcf, 'position', [0 0 1350 840]);
 
 set(gca,'Xgrid','on'); % 出现竖线
 set(gca,'Ygrid','on'); % 出现横线

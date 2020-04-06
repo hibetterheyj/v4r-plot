@@ -89,9 +89,9 @@ for ii = 1:length(succ)
     hold on;
 end
 
-fontSize = 18;
+fontSize = 24;
 legendFont = 12;
-set(gcf, 'position', [0 0 1350 850]);
+set(gcf, 'position', [0 0 1350 840]);
 
 set(gca,'Xgrid','on'); % 出现竖线
 set(gca,'Ygrid','on'); % 出现横线
