@@ -43,7 +43,7 @@ fontSize = 12;
 % set(gca,'XLim',[1, 5]);%X轴的数据显示范围
 set(gca,'XTick',[1:1:6]);%设置要显示坐标刻度
 % set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.2f'))
-set(gca,'TickLabelInterpreter','latex'); % 设置解析器为latex
+% set(gca,'TickLabelInterpreter','latex'); % 设置解析器为latex
 % set(gca,'XTickLabel',{'KCC','TACF1','TACF2','TACF3','\textbf{TACF}'})
 xLabelName1 = '\it{\Delta k}';
 % Times 字体
