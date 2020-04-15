@@ -4,22 +4,7 @@
 
 ### TODO
 
-- [ ] 读取表格
-
-  - [ ] 带指标描述的xlsx
-
-  - [ ] 不带指标的xlsx（可以见星星图）
-
-    ```matlab
-    C = readcell('KBCF_UAVDT_data.xlsx');
-    
-    TrkSet = C(:,1);
-    prec = cell2mat(C(:,2));
-    succ = cell2mat(C(:,3));
-    fps = cell2mat(C(:,4));
-    FPSSet = C(:,4);
-    SourceSet = C(:,5);
-    ```
+- [ ] 折线图-跟踪过程CLE变化图
 
 - [ ] 双折线图
 
@@ -28,9 +13,9 @@
 - [ ] 玫瑰图
   - https://ww2.mathworks.cn/matlabcentral/fileexchange/59561-spider_plot
   - https://blogs.mathworks.com/pick/2020/02/07/spider-plot-ii-custom-charts-intro/
-  
+
 - [ ] 热力图
-  
+
   - https://blogs.mathworks.com/pick/2017/04/07/r2017a-heatmap/
 
 ### Finished
