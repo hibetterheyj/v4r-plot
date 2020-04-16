@@ -9,7 +9,9 @@
 % https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.chart.primitive.bar-properties.html
 
 %% 说明
-% 多个跟踪器在单一指标变量分析
+% 参数分析，单一指标变量分析
+% - 可以直接读入excel文件
+% - 可以直接切换多变量
 
 %% 正文
 clear;clc;close all;

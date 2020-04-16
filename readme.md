@@ -4,11 +4,15 @@
 
 ### TODO
 
+- [ ] 阅读并重构所有bar代码！！！
+
+  参考 [**bar**](https://ww2.mathworks.cn/help/matlab/ref/bar.html), [**barh**](https://ww2.mathworks.cn/help/matlab/ref/barh.html)
+
 - [ ] 折线图-跟踪过程CLE变化图
 
-- [ ] 双折线图
-
 - [ ] 折线图不同时间段
+
+- [ ] 双折线图
 
 - [ ] 玫瑰图
   - https://ww2.mathworks.cn/matlabcentral/fileexchange/59561-spider_plot
@@ -17,6 +21,10 @@
 - [ ] 热力图
 
   - https://blogs.mathworks.com/pick/2017/04/07/r2017a-heatmap/
+  
+- [ ] 其他图示未完待续
+
+  参见[**MATLAB图库**](https://ww2.mathworks.cn/products/matlab/plot-gallery.html)！
 
 ### Finished
 
@@ -27,7 +35,7 @@
 - [x] 棒棒糖图
 - [x] 多角度响应图
 - [x] 折线图-不同指标（20200415，v1）
-- [x] 折线图-参数分析
+- [x] 折线图-参数分析（20200416，v2）
 - [x] 柱状图
   - [ ] 多bar（20200406，v1）
   - [ ] 单bar（20200415，v1）
@@ -71,3 +79,4 @@
 
 - [altmany/**export_fig**](https://github.com/altmany/export_fig): A MATLAB toolbox for exporting publication quality figures
 - [vacancy/**Jacinle**](https://github.com/vacancy/Jacinle): MIT大佬个人代码库(python)
+- [MATLAB之折线图、柱状图、饼图以及常用绘图技巧](https://www.cnblogs.com/HZL2017/p/6880613.html)
