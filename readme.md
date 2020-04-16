@@ -8,8 +8,6 @@
 
   参考 [**bar**](https://ww2.mathworks.cn/help/matlab/ref/bar.html), [**barh**](https://ww2.mathworks.cn/help/matlab/ref/barh.html)
 
-- [ ] 折线图-跟踪过程CLE变化图
-
 - [ ] 折线图不同时间段
 
 - [ ] 双折线图
@@ -27,6 +25,8 @@
   参见[**MATLAB图库**](https://ww2.mathworks.cn/products/matlab/plot-gallery.html)！
 
 ### Finished
+
+- [x] 折线图-跟踪过程CLE变化图（20200416，v2）
 
 - [x] 星星图
   - [x] 普通版本（20200330，v2）
