@@ -2,29 +2,15 @@
 
 😀 to be continued !
 
-### TODO
+### [Van-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Van-plot)
 
-- [ ] 阅读并重构所有bar代码！！！
+TODO
 
-  参考 [**bar**](https://ww2.mathworks.cn/help/matlab/ref/bar.html), [**barh**](https://ww2.mathworks.cn/help/matlab/ref/barh.html)
+### [Fuling-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Fuling-plot)
 
-- [ ] 折线图不同时间段
+- [x] TB-BiCF柱状图！（20200416，v1）
 
-- [ ] 双折线图
-
-- [ ] 玫瑰图
-  - https://ww2.mathworks.cn/matlabcentral/fileexchange/59561-spider_plot
-  - https://blogs.mathworks.com/pick/2020/02/07/spider-plot-ii-custom-charts-intro/
-
-- [ ] 热力图
-
-  - https://blogs.mathworks.com/pick/2017/04/07/r2017a-heatmap/
-  
-- [ ] 其他图示未完待续
-
-  参见[**MATLAB图库**](https://ww2.mathworks.cn/products/matlab/plot-gallery.html)！
-
-### Finished
+### [Yujie-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Yujie-plot)
 
 - [x] 折线图-跟踪过程CLE变化图（20200416，v2）
 - [x] 星星图
@@ -43,38 +29,6 @@
 - [x] 其他
   - 数据集尺度分析
   - 数据集挑战因素分析
-
-### File Exchange Pick of the Week
-
-- Spider Plot
-
-  https://blogs.mathworks.com/pick/2020/02/07/spider-plot-ii-custom-charts-intro/
-
-  https://blogs.mathworks.com/pick/2020/02/14/spider-plot-iii-custom-charts-authoring/
-
-- Heatmap
-
-  https://blogs.mathworks.com/pick/2017/04/07/r2017a-heatmap/
-
-- Subplot Position Calculator
-
-  https://blogs.mathworks.com/pick/2017/05/19/subplot-position-calculator/
-
-- Non-Uniform Contourf
-
-  https://blogs.mathworks.com/pick/2018/01/12/non-uniform-contourf/
-
-- Draggable Data Tips 可拖动小标签
-
-  https://blogs.mathworks.com/pick/2019/02/08/draggable-data-tips/
-
-- Multi-column legend, revisited 多行标签
-
-  https://blogs.mathworks.com/pick/2019/03/22/multi-column-legend-revisited/
-
-- Py_Addpath 运行python代码
-
-  https://blogs.mathworks.com/pick/2019/12/06/py_addpath/
 
 ### 参考 | Reference
 
