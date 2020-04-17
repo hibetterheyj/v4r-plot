@@ -8,8 +8,8 @@
 
 ![star_plotv2](./star_plotv2.png)
 
-- `KBCF_prec_log_star.m` 与`KBCF_succ_log_star.m`
+- `TB-BiCF_prec_log_star.m` 与`TB-BiCF_succ_log_star.m`
 
-![`KBCF_prec_log_star](./KBCF_prec_log_star.png)
+![TB_BiCF_prec_log_star](./TB_BiCF_prec_log_star.png)
 
-![KBCF_succ_log_star](./KBCF_succ_log_star.png)
+![TB_BiCF_succ_log_star](./TB_BiCF_succ_log_star.png)

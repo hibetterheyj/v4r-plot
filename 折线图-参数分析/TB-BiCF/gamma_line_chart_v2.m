@@ -20,22 +20,9 @@ saveFileType = 'png'; % pdf/png
 
 %% 数据
 % 手动输入
-% data = ...
-% [0.410 0;
-% 0.423 0.05;
-% 0.437 0.10;
-% 0.430 0.15;
-% 0.431 0.20;
-% 0.421 0.25;
-% 0.415 0.30;
-% 0.416 0.35;
-% 0.412 0.40];
-% beta = data(:,2);
-% succ = data(:,1);
-% baseline = ones(9,1);
 % 读取xlsx，res_record_gamma.xlsx基本结构：
 % lr	gamma	fintl	UAV123_10fps_Prec.	UAV123_10fps_Succ.
-C = readcell('res_record_gamma.xlsx');
+C = readcell('../res_record_gamma.xlsx');
 start = 7; plot_length = 9; % 选择数量
 gamma = cell2mat(C(start:start+plot_length-1,2));
 prec = cell2mat(C(start:start+plot_length-1,4));
@@ -44,11 +31,15 @@ succ = cell2mat(C(start:start+plot_length-1,5));
 % 所选指标
 x_param = gamma;
 y_param = prec; % prec/succ
-peak_idx = 6;
+
+% 最高点
+peak_prec = 0.1;
+peak_succ = 0.1;
+peak_vline_color = [217, 83, 25]/255;
 
 %% 正式画图
 figureHCL = figure(301);
-set(figureHCL,'position',[0 0 700 250]);
+set(figureHCL,'position',[0 0 700 160]);
 lineWidth = 2.5; % 画线的线粗
 fontSize = 14;
 tickFontSize = 12;
@@ -66,7 +57,7 @@ set(gca,'XLim',[min(x_param), max(x_param)]);%X轴的数据显示范围
 set(gca,'XTickLabel',num2str(x_param,'%.2f'));
 % set(gca,'TickLabelInterpreter','latex'); % 设置解析器为latex
 % set(gca,'XTickLabel',{'KCC','TACF1','TACF2','TACF3','\textbf{TACF}'})
-xLabelName1 = '\gamma';
+xLabelName1 = '\it{\gamma}';
 
 %设置y轴范围和刻度
 if y_param == succ
@@ -76,6 +67,8 @@ if y_param == succ
     % set(gca,'YTickLabel',[95:1:101]);%给坐标加标签
     set(gca,'YTickLabel',num2str(get(gca,'YTick')','%.3f'))
     yLabelName1 = 'Success rate';
+    hold on
+    plot([peak_succ peak_succ], [0 max(succ(:))],'--','Color',peak_vline_color, 'LineWidth', lineWidth);
 elseif y_param == prec
     % prec [0.6606 0.6863] 0.660/0.655 0.689
     set(gca,'YLim',[0.665 0.688]);%X轴的数据显示范围
@@ -83,11 +76,13 @@ elseif y_param == prec
     set(gca,'YTickLabel',num2str(get(gca,'YTick')','%.3f'))
     % set(gca,'YTickLabel',[95:1:101]);%给坐标加标签
     yLabelName1 = 'Precision';
+    hold on
+    plot([peak_prec peak_prec], [0 max(prec(:))],'--','Color',peak_vline_color, 'LineWidth', lineWidth);
 end
 
 % Times 字体
 set(gca,'FontName','Times New Roman','fontSize',tickFontSize); % 设置坐标轴值字体
-xlabel(xLabelName1,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 纵轴名称
+xlabel(xLabelName1,'fontsize',fontSize,'fontname','Times New Roman'); % 纵轴名称
 ylabel(yLabelName1,'fontsize',fontSize,'fontname','Times New Roman','fontweight','bold'); % 纵轴名称
 % 默认无衬线字体
 % set(gca,'fontSize',fontSize); % 设置坐标轴值字体
