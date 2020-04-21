@@ -16,7 +16,7 @@
 %% 代码
 clc;clear;close all;
 % UAV20L UAV123 UAV123_10fps UAVDT DTB70 VisDrone2018
-dataset = 'VisDrone2018';
+dataset = 'UAV20L';
 
 % 相关文件夹
 attFolder = ['./anno/' dataset '/att/'];
@@ -41,22 +41,20 @@ end
 % 数据集对应指标
 switch dataset
     case {'UAV123_10fps', 'UAV123', 'UAV20L'}
-        attName = {'Aspect ratio change','Background clutter','Camera motion','Fast motion','Full occlusion','Illumination variation','Low resolution','Out-of-view','Partial occlusion','Scale variation','Similar object','Viewpoint change'};
-        attName_abbr = {'ARC','BC','CM','FM','FOC','IV','LR','OV','POC','SV','SOB','VC'}; % 行标缩写
+        attName={'Scale variation' 'Aspect ratio change' 'Low resolution' 'Fast motion' 'Full occlusion' 'Partial occlusion' 'Out-of-view' 'Background clutter' 'Illumination variation' 'Viewpoint change' 'Camera motion' 'Similar object'};
+        attName_abbr = {'SV','ARC','LR','FM','FOC','POC','OV','BC','IV','VC','CM','SOB'}; % 行标缩写
         attNum = 12;
     case 'UAVDT'
-        attName = {'Background clutter','Camera motion','Illumination variations','Large occlusion','Long-term tracking','Object blur','Object motion','Scale variations','Small object'};
-        attName_abbr = {'BC','CM','IV','LO','LTT','OB','OM','SV','SO'}; % 行标缩写
+        attName = {'Background clutter','Camera motion','Object motion','Small object','Illumination variations','Object blur','Scale variations','Long-term tracking','Large occlusion'};
+        attName_abbr = {'BC','CM','OM','SO','IV','OB','SV','LTT','LO'}; % 行标缩写
         attNum = 9;
     case 'DTB70'
-        attName = {'Scale variation','Aspect ratio variation','Occlusion','Deformation','Fast camera motion','In-plane rotation','Out-of-plane rotation','Out-of-view','Background clutter','Similar objects around','Motion blur'};
-        attName_abbr = {'ARV','BC','DEF','FCM','IPR','MB','OCC','OPR','OV','SV','SOA'}; % 行标缩写
+        attName={'Scale variation' 'Aspect ratio variation' 'Occlusion'	'Deformation' 'Fast camera motion'	'In-plane rotation' 'Out-of-plane rotation'  'Out-of-view'	'Background clutter' 'Similar objects around' 'Motion blur'};
+        attName_abbr = {'SV','ARV','OCC','DEF','FCM','IPR','OPR','OV','BC','SOA','MB'}; % 行标缩写
         attNum = 11;
     case 'VisDrone2018'
-%         attName = {'Aspect Ratio Change','Background Clutter','Camera Motion','Fast Motion','Full Occlusion','Illumination Variation','Low Resolution',...
-%            'Out-of-View','Partial Occlusion','Similar Object','Scale Variation','Viewpoint Change'};
         attName = {'Aspect ratio change','Background clutter','Camera motion','Fast motion','Full occlusion','Illumination variation','Low resolution',...
-           'Out-of-view','Partial occlusion','Similar object','Scale variation','Viewpoint change'};
+               'Out-of-view','Partial occlusion','Similar object','Scale variation','Viewpoint change'};
         attName_abbr = {'ARV','BC','CM','FM','FOC','IV','LR','OV','POC','SOB','SV','VC'}; % 行标缩写
         attNum = 12;
 end
