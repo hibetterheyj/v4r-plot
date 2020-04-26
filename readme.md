@@ -1,16 +1,14 @@
 ## v4r-matlab-plot
 
-😀 to be continued !
+> For better scientific drawing pipeline 😀
 
-### [Van-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Van-plot)
+### At a glance
 
-TODO
+To be continued !
 
-### [Fuling-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Fuling-plot)
+### Detailed scripts
 
-- [x] TB-BiCF柱状图！（20200416，v1）
-
-### [Yujie-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Yujie-plot)
+#### [Yujie-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Yujie-plot)
 
 - [x] 折线图-跟踪过程CLE变化图（20200416，v2）
 - [x] 星星图
@@ -26,9 +24,18 @@ TODO
 - [x] 柱状图
   - [x] 多bar（20200406，v1）
   - [x] 单bar（20200415，v1）
+  - [x] 左右轴多bar（20200426，v1）
 - [x] 其他
   - 数据集尺度分析
   - 数据集挑战因素分析
+
+#### [Fuling-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Fuling-plot)
+
+- [x] TB-BiCF柱状图！（20200416，v1）
+
+#### [Van-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Van-plot)
+
+TODO
 
 ### 参考 | Reference
 

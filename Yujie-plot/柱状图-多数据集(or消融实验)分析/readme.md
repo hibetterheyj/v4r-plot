@@ -25,3 +25,8 @@
 > 多个跟踪器在一个指标（可切换）**三个**数据集的分析
 
 ![triple_bar_plot_prec](./triple_bar_plot_prec.png)
+
+- `yyaxis_bar_plot.m` 左右轴柱状图
+
+  ![yyaxis_bar_plot](./yyaxis_bar_plot.png)
+
