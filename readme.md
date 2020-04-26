@@ -4,7 +4,13 @@
 
 ### At a glance
 
-To be continued !
+<details open>   <summary><b>折线图-跟踪过程指标变化</b></summary> <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%8A%98%E7%BA%BF%E5%9B%BE-%E8%B7%9F%E8%B8%AA%E8%BF%87%E7%A8%8BCLE%E5%8F%98%E5%8C%96%E5%9B%BE/S0601_Overlap.png" alt="两宋喜欢的词牌名"> </div> </details>
+
+<details>   <summary><b>折线图-图中图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E5%9B%BE%E4%B8%AD%E5%9B%BE/ReCF_succ_gH.png" alt="两宋喜欢的词牌名"> </div> </details>
+
+<details>   <summary><b>星星图-跟踪性能/运行速度图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%98%9F%E6%98%9F%E5%9B%BE/TB_BiCF_prec_log_star.png" alt="两宋喜欢的词牌名"> </div> </details>
+
+<details>   <summary><b>柱状图-两个y轴不同跟踪性能</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%9F%B1%E7%8A%B6%E5%9B%BE-%E5%A4%9A%E6%95%B0%E6%8D%AE%E9%9B%86(or%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C)%E5%88%86%E6%9E%90/yyaxis_bar_plot.png" alt="两宋喜欢的词牌名"> </div> </details>
 
 ### Detailed scripts
 
