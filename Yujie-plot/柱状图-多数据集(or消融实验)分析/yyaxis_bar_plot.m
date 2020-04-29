@@ -9,6 +9,8 @@
 % https://ww2.mathworks.cn/help/matlab/ref/text.html
 % 5. MATLAB Answers - Black axes for yyaxis (not default blue and orange)
 % https://www.mathworks.com/matlabcentral/answers/451917-black-axes-for-yyaxis-not-default-blue-and-orange
+% 6. matlab - Axes 属性
+% https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.axis.axes-properties.html
 
 %% 说明
 % 多个跟踪器在一个指标两个数据集的分析
@@ -21,10 +23,12 @@ addpath('../');
 saveFileName = 'yyaxis_bar_plot';
 saveFileType = 'png'; % pdf/png
 addText = true; % true/false
-fontSize = 12;
+fontSize = 16;
+textFontSize = 14;
 
 % 图窗
 figure4D = figure(40);
+% 调整大小！
 set(figure4D,'position',[0 0 800 450]);
 
 % 数据
@@ -58,10 +62,10 @@ if addText
     for i = 1 : size(y, 1)
         if i == size(y, 1)
             text(x(i)-centerOffset, y(i,1), num2str(y(i,1)','%.3f'),...
-                'fontname','Times New Roman','fontweight','bold','HorizontalAlignment','center','VerticalAlignment','bottom');
+                'fontname','Times New Roman','fontweight','bold','FontSize',textFontSize,'HorizontalAlignment','center','VerticalAlignment','bottom');
         else
             text(x(i)-centerOffset, y(i,1), num2str(y(i,1)','%.3f'),...
-                'fontname','Times New Roman','HorizontalAlignment','center','VerticalAlignment','bottom');
+                'fontname','Times New Roman','FontSize',textFontSize,'HorizontalAlignment','center','VerticalAlignment','bottom');
         end
     end
 end
@@ -84,10 +88,10 @@ if addText
     for i = 1 : size(y, 1)
         if i == size(y, 1)
             text(x(i)+centerOffset, y(i,2), num2str(y(i,2)','%.3f'),...
-                'fontname','Times New Roman','fontweight','bold','HorizontalAlignment','center','VerticalAlignment','bottom');
+                'fontname','Times New Roman','FontSize',textFontSize,'fontweight','bold','HorizontalAlignment','center','VerticalAlignment','bottom');
         else
             text(x(i)+centerOffset, y(i,2), num2str(y(i,2)','%.3f'),...
-                'fontname','Times New Roman','HorizontalAlignment','center','VerticalAlignment','bottom');
+                'fontname','Times New Roman','FontSize',textFontSize,'HorizontalAlignment','center','VerticalAlignment','bottom');
         end
     end
 end
@@ -105,8 +109,10 @@ set(gca,'Ygrid','on'); % 出现横线
 %设置x轴范围和刻度
 % set(gca,'XLim',[1, 5]);%X轴的数据显示范围
 set(gca,'XTick',[1:3]);%设置要显示坐标刻度
-set(gca,'TickLabelInterpreter','latex'); % 设置解析器为latex
-set(gca,'XTickLabel',{'IBRI (w/o MF+DA)','IBRI (w/o DA)','\textbf{IBRI}'})
+% set(gca,'TickLabelInterpreter','latex'); % 设置解析器为latex
+ax.XAxis.TickLabelInterpreter = 'latex'; %避免全局收到干扰
+% set(gca,'XTickLabel',{'IBRI (w/o MF+DA)','IBRI (w/o DA)','\textbf{IBRI}'})
+set(gca,'XTickLabel',{'IBRI (w/o IRI+DA)','IBRI (w/o DA)','\textbf{IBRI}'})
 % xlabel('')
 % 设置标签，及其位置
 legend('Success rate','Precision','Location','northwest');
