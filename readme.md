@@ -1,6 +1,6 @@
 # v4r-plot
 
-> For better scientific drawing pipeline 😀
+> For better scientific plottng pipeline 😀
 
 ## At a glance
 
@@ -10,7 +10,6 @@
 <details>   <summary><b>折线图-图中图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E5%9B%BE%E4%B8%AD%E5%9B%BE/ReCF_succ_gH.png" alt="两宋喜欢的词牌名"> </div> </details>
 <details>   <summary><b>星星图-跟踪性能/运行速度图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%98%9F%E6%98%9F%E5%9B%BE/TB_BiCF_prec_log_star.png" alt="两宋喜欢的词牌名"> </div> </details>
 <details>   <summary><b>柱状图-两个y轴不同跟踪性能</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%9F%B1%E7%8A%B6%E5%9B%BE-%E5%A4%9A%E6%95%B0%E6%8D%AE%E9%9B%86(or%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C)%E5%88%86%E6%9E%90/yyaxis_bar_plot.png" alt="两宋喜欢的词牌名"> </div> </details>
-
 ---
 
 ## Detailed scripts
@@ -44,6 +43,7 @@
 - [x] 其他
   - 数据集尺度分析
   - 数据集挑战因素分析
+- [x] 算法复杂度曲线|ComplexityPlot（20201004，v1）
 
 #### [Fuling-plot](https://github.com/hibetterheyj/v4r-matlab-plot/tree/master/Fuling-plot)
 
@@ -61,6 +61,7 @@ TODO
 
 - Matplotlib gallery: https://matplotlib.org/3.3.1/gallery/index.html
 - [vacancy/**Jacinle**](https://github.com/vacancy/Jacinle): MIT前辈个人代码库(python)
+- [Python 和数据科学笔记](https://website2.readthedocs.io/index.html)
 
 #### Matlab
 
@@ -71,5 +72,4 @@ TODO
 - [Matlab用户需要一张画图速查表 | Matlab Plot Cheatsheet](https://zhuanlan.zhihu.com/p/112229373)
 
   ![MATLAB_cheatsheet](http://home.ustc.edu.cn/~pjer1316/img/cheatsheet_huge.png)
-
 - [MATLAB之折线图、柱状图、饼图以及常用绘图技巧](https://www.cnblogs.com/HZL2017/p/6880613.html)
