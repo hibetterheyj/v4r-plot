@@ -4,6 +4,14 @@
 
 ## At a glance
 
+### Python (2021.05 updated!)
+
+> :bulb: **visualize the notebook directly in [nbviewer](https://nbviewer.jupyter.org/github/hibetterheyj/v4r-plot/blob/master/plot_python/v4r-plot_py.ipynb) !**
+
+<details open>   <summary><b>line & area chart</b></summary> <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-plot/master/plot_python/example/all_rail_length.png" alt="line & area chart"> </div> </details>
+<details open>   <summary><b>double-y line chart</b></summary> <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-plot/master/plot_python/example/oerlikon_zurich_population.png" alt="double-y line chart"> </div> </details>
+<details>   <summary><b>bar plot</b></summary> <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-plot/master/plot_python/example/oerlikon_station_traffic.png" alt="bar plot"> </div> </details>
+
 ### Matlab
 
 <details open>   <summary><b>算法复杂度曲线</b></summary> <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-plot/master/Yujie-plot/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%9B%B2%E7%BA%BF/complexityPlot.png" alt="算法复杂度曲线"> </div> </details>
@@ -11,7 +19,6 @@
 <details>   <summary><b>折线图-图中图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E5%9B%BE%E4%B8%AD%E5%9B%BE/ReCF_succ_gH.png" alt="折线图-图中图"> </div> </details>
 <details>   <summary><b>星星图-跟踪性能/运行速度图</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%98%9F%E6%98%9F%E5%9B%BE/TB_BiCF_prec_log_star.png" alt="星星图-跟踪性能/运行速度图"> </div> </details>
 <details>   <summary><b>柱状图-两个y轴不同跟踪性能</b></summary>   <div align="center"> <img src="https://raw.githubusercontent.com/hibetterheyj/v4r-matlab-plot/master/Yujie-plot/%E6%9F%B1%E7%8A%B6%E5%9B%BE-%E5%A4%9A%E6%95%B0%E6%8D%AE%E9%9B%86(or%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C)%E5%88%86%E6%9E%90/yyaxis_bar_plot.png" alt="柱状图-两个y轴不同跟踪性能"> </div> </details>
-
 ---
 
 ## Detailed scripts
