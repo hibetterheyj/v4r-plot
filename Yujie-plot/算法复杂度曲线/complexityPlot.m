@@ -14,7 +14,7 @@ addpath('../');
 clc;clear;close all;
 
 saveFileName = 'complexityPlot';
-saveFileType = 'png'; % pdf/png
+saveFileType = 'pdf'; % pdf/png
 
 plotDrawStyle = {struct('color',[1,0,0],'style','-'),...
     struct('color',[1,0,0],'style','--'),...
