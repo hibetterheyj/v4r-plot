@@ -1,9 +1,73 @@
 #######################################
-# Modified from https://github.com/github/gitignore/blob/master/Global/MATLAB.gitignore
-# Project name: MATLAB.gitignore_v1.0
-# Author name: Yujie He
-# Created time: 20200125
-# Last edited time: 20200125
+# Custom
+#######################################
+# folders
+.vscode
+
+# files
+
+#######################################
+# Python
+#######################################
+
+# 笔记中间保存文件
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython相关配置文件
+# IPython
+profile_default/
+ipython_config.py
+
+# 环境文件
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder 项目文件
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# 中间编译文件
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C 拓展文件
+# C extensions
+*.so
+
+# 发行版/包相关文件
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+#######################################
+# MATLAB
 #######################################
 
 ## Folder
